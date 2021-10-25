@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/61880a5eb3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="container">
+          <ul class="service-list">
+            <li class="single-service">
+              <a href="#recipeSearh">
+                <i class="fas fa-search"></i>
+                <h3>Find Recipes</h3>
+              </a>
+            </li>
+            <li class="single-service">
+              <a href="#recipeBook">
+                <i class="fas fa-utensils"></i>
+                <h3>Recipe Book</h3>
+              </a>
+            </li>
+            <li class="single-service">
+              <a href="#planner">
+                <i class="fas fa-columns"></i>
+                <h3>Planner</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <section id="recipeSearch">
+        <div class="container">
+          <h2>Find recipes</h2>
+          <hr class="hr-dark" />
+          <form>
+            <div>
+              <label for="category">Category:</label><br />
+              <select name="category" id="mealCategory" value="category">
+                <option value="All">All</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Side">Side</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Beef">Beef</option>
+              </select>
+            </div>
+            <div>
+              <label for="ingredients">Ingredients:</label><br />
+              <input type="text" id="ingredients" name="ingredients" />
+            </div>
+          </form>
+          <button type="button" id="searchAPI">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </section>
+      <section id="recipeBook">
+        <div class="container bg-green">
+          <h2>Your Recipe Book</h2>
+          <hr class="hr-dark" />
+        </div>
+      </section>
+      <section id="planner">
+        <div class="container">
+          <h2>Your weekly plan</h2>
+          <hr class="hr-dark" />
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
