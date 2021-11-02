@@ -3,62 +3,12 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px 30px;
-}
-.bg-green {
-  background-color: rgb(218, 222, 217, 255);
-}
+/* common */
 h2 {
   text-transform: uppercase;
 }
-header {
-  background: linear-gradient(
-      to bottom,
-      rgba(78, 73, 70, 0.8) 0%,
-      rgba(94, 89, 86, 0.8) 100%
-    ),
-    url(./assets/brooke-lark--F_5g8EEHYE-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  position: sticky;
-  top: 0;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-}
-.single-service > a > i {
-  color: white;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.service-list li {
-  border: solid 2px;
-  border-radius: 50%;
-  margin: 0 40px;
-  height: 20vh;
-  width: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-width: 0;
-  font-size: 12px;
-}
-.single-service > a {
-  text-decoration: none;
-  color: white;
-}
-.service-list {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
+.bg-green {
+  background-color: rgb(218, 222, 217, 255);
 }
 button {
   font-size: 15px;
@@ -74,9 +24,66 @@ button {
 button:hover {
   background-color: rgb(89, 103, 105);
 }
-#recipeSearch {
+.hr-dark {
+  max-width: 60px;
+  background-color: black;
+  margin-bottom: 40px;
+}
+/* header */
+header {
+  background: linear-gradient(
+      to bottom,
+      rgba(78, 73, 70, 0.8) 0%,
+      rgba(94, 89, 86, 0.2) 100%
+    ),
+    url(./assets/brooke-lark--F_5g8EEHYE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
-  margin: 10px;
+  color: white;
+  text-transform: uppercase;
+  top: 0;
+}
+.service-list {
+  padding: 120px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.service-list li {
+  border-radius: 5px 5px 0 0;
+  height: 10vh;
+  width: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  box-shadow: 2px -4px 3px 1px rgba(0, 0, 0, 0.4);
+  border-width: 0;
+}
+.single-service {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.single-service > a {
+  text-decoration: none;
+  color: black;
+}
+.single-service > a > i {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.single-service:hover:not(.selected) {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.selected {
+  background-color: white;
+}
+/* find recipes section */
+#findRecipesSect {
+  text-align: center;
+  margin: 30px;
 }
 form input,
 select {
@@ -95,10 +102,6 @@ hr {
   margin: 20px auto;
   background-color: rgb(218, 222, 217, 255);
 }
-.hr-dark {
-  max-width: 60px;
-  background-color: black;
-}
 #singleRecipe {
   display: flex;
   width: 70%;
@@ -112,42 +115,59 @@ hr {
   font-size: 12px;
 }
 #singleRecipe img {
-  height: 15vh;
+  height: 20vh;
+  border-radius: 5px;
 }
-.single-service > a > i {
-  color: white;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.service-list li {
-  border-radius: 50%;
-  margin: 0 40px;
-  height: 18vh;
-  width: 18vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-width: 0;
-  font-size: 12px;
-}
-.single-service > a {
-  text-decoration: none;
-  color: white;
-}
-.service-list {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-.single-service:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-#recipeBook,
-#planner {
+/* recipe book section */
+#recipeBookSec {
   text-align: center;
+  margin: 30px;
 }
 #singleRecipePage {
   display: flex;
+  margin: 30px;
+  background-color: rgb(218, 222, 217, 255);
+  border-radius: 20px;
+  text-align: left;
+}
+#singleRecipePage button {
+  margin: 20px 10px 0 0;
+}
+#ingredientsList {
+  margin: 20px 0;
+}
+#aboutContent {
+  margin: 20px;
+}
+#singleRecipePage img {
+  height: 40vh;
+  border-radius: 15px;
+  margin: 10px;
+}
+/* planner section */
+#plannerSec {
+  text-align: center;
+  margin: 30px;
+}
+#plannerSec table {
+  width: 80%;
+  margin: 20px auto;
+}
+#plannerSec td,
+#plannerSec th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#plannerSec td:first-child {
+  background-color: rgb(218, 222, 217, 255);
+}
+#plannerSec tr:hover {
+  background-color: #ddd;
+}
+#plannerSec th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(137, 145, 135);
+  color: white;
 }
